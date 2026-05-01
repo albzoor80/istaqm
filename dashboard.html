@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Istaqim Dashboard</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="/images/theme/logo.ico" type="image/x-icon">
+  <link href="/css/dashboard.css" rel="stylesheet">
+</head>
+<body>
+  <div id="dashboardView" class="d-none d-flex flex-column" style="min-height: 100vh;">
+    <header id="header" class="header fixed-top d-flex align-items-center">
+      <div class="d-flex w-100 align-items-center">
+        <div class="d-inline-flex align-items-center justify-content-between gap-2 nav-logo-container">
+          <a class="navbar-brand py-2" href="/"><img src="/images/theme/istaqm-128.png" alt="Istaqim"></a>
+          <a class="nav-link" href="/" target="_blank"><i class="bi bi-box-arrow-up-right me-1"></i>View Site</a>
+          <button type="button" class="btn btn-link text-dark p-0 mx-2" id="sidebarToggle" aria-label="Toggle sidebar">
+            <i class="bi bi-list fs-1"></i>
+          </button>
+        </div>
+        <div class="d-flex flex-grow-1 align-items-center justify-content-between gap-2">      
+          <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light main-navbar">
+              <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                  <ul class="navbar-nav flex-grow-1">
+                      <li class="nav-item active"><a class="nav-link" href="#" data-page="stats"><i class="bi bi-speedometer2 me-1"></i>Dashboard</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#" data-page="profile"><i class="bi bi-person me-1"></i>Profile</a></li>
+                  </ul>
+              </div>
+          </nav>
+          <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light header-nav ms-auto">
+              <div class="dropdown">
+                <button class="btn btn-link text-decoration-none dropdown-toggle d-flex align-items-center gap-2 p-0" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="text-dark d-none d-sm-inline-block">Welcome <span id="userName" class="text-dark fw-medium"></span></span>
+                  <img id="userAvatar" src="" alt="" class="rounded-circle" width="40" height="40" style="object-fit:cover">
+                </button>
+                <ul class="dropdown-menu dropdown-menu-arrow profile text-small" aria-labelledby="dropdownUser1">
+                  <li><a class="dropdown-item" href="#" data-page="profile"><i class="bi bi-person me-2"></i>Profile</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/auth/logout"><i class="bi bi-box-arrow-right me-2"></i>Logout</a></li>
+                </ul>
+              </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <div class="d-flex flex-grow-1 dashboard-wrapper">
+      <div class="sidebar-overlay" id="sidebarOverlay"></div>
+      <aside class="sidebar pt-2" id="sidebar">
+        <nav class="nav flex-column py-2">
+          <a class="nav-link active" href="#" data-page="stats"><i class="bi bi-bar-chart-fill"></i><span>Statistics</span></a>
+          <a class="nav-link" href="#" data-page="categories"><i class="bi bi-folder2"></i><span>Categories</span></a>
+          <a class="nav-link" href="#" data-page="cities"><i class="bi bi-geo-alt"></i><span>Cities</span></a>
+          <a class="nav-link" href="#" data-page="posts"><i class="bi bi-file-post"></i><span>Projects</span></a>
+          <a class="nav-link" href="#" data-page="slides"><i class="bi bi-sliders"></i><span>Slides</span></a>
+          <a class="nav-link" href="#" data-page="testimonials"><i class="bi bi-chat-quote"></i><span>Testimonials</span></a>
+          <a class="nav-link" href="#" data-page="users"><i class="bi bi-people"></i><span>Users</span></a>
+          <div class="divider"></div>
+          <a class="nav-link" href="#" data-page="profile"><i class="bi bi-person"></i><span>Profile</span></a>
+          <a class="nav-link" href="/auth/logout"><i class="bi bi-box-arrow-right"></i><span>Logout</span></a>
+        </nav>
+      </aside>
+
+      <main class="main-content" id="mainContent">
+        <div id="statsPage" class="page-content">
+          <h4 class="page-title mb-4">Statistics</h4>
+          <div class="stats-grid mb-4">
+            <div class="stat-card-wrap">
+              <div class="stat-card d-flex align-items-center gap-2 gap-sm-3">
+                <div class="stat-icon stat-icon-primary"><i class="bi bi-people"></i></div>
+                <div class="stat-body flex-grow-1 min-w-0">
+                  <div class="stat-value" id="statUsers">0</div>
+                  <div class="stat-label">Users</div>
+                </div>
+                <a href="#" class="stat-gear text-muted" data-page="users" title="Manage"><i class="bi bi-gear"></i></a>
+              </div>
+            </div>
+            <div class="stat-card-wrap">
+              <div class="stat-card d-flex align-items-center gap-2 gap-sm-3">
+                <div class="stat-icon stat-icon-info"><i class="bi bi-folder2"></i></div>
+                <div class="stat-body flex-grow-1 min-w-0">
+                  <div class="stat-value" id="statCategories">0</div>
+                  <div class="stat-label">Categories</div>
+                </div>
+                <a href="#" class="stat-gear text-muted" data-page="categories" title="Manage"><i class="bi bi-gear"></i></a>
+              </div>
+            </div>
+            <div class="stat-card-wrap">
+              <div class="stat-card d-flex align-items-center gap-2 gap-sm-3">
+                <div class="stat-icon stat-icon-success"><i class="bi bi-geo-alt"></i></div>
+                <div class="stat-body flex-grow-1 min-w-0">
+                  <div class="stat-value" id="statCities">0</div>
+                  <div class="stat-label">Cities</div>
+                </div>
+                <a href="#" class="stat-gear text-muted" data-page="cities" title="Manage"><i class="bi bi-gear"></i></a>
+              </div>
+            </div>
+            <div class="stat-card-wrap">
+              <div class="stat-card d-flex align-items-center gap-2 gap-sm-3">
+                <div class="stat-icon stat-icon-warning"><i class="bi bi-file-post"></i></div>
+                <div class="stat-body flex-grow-1 min-w-0">
+                  <div class="stat-value" id="statProjects">0</div>
+                  <div class="stat-label">Projects</div>
+                </div>
+                <a href="#" class="stat-gear text-muted" data-page="posts" title="Manage"><i class="bi bi-gear"></i></a>
+              </div>
+            </div>
+            <div class="stat-card-wrap">
+              <div class="stat-card d-flex align-items-center gap-2 gap-sm-3">
+                <div class="stat-icon stat-icon-secondary"><i class="bi bi-images"></i></div>
+                <div class="stat-body flex-grow-1 min-w-0">
+                  <div class="stat-value" id="statProjectsImages">0</div>
+                  <div class="stat-label">Gallery Images</div>
+                </div>
+              </div>
+            </div>
+            <div class="stat-card-wrap">
+              <div class="stat-card d-flex align-items-center gap-2 gap-sm-3">
+                <div class="stat-icon stat-icon-primary"><i class="bi bi-sliders"></i></div>
+                <div class="stat-body flex-grow-1 min-w-0">
+                  <div class="stat-value" id="statSlides">0</div>
+                  <div class="stat-label">Slides</div>
+                </div>
+                <a href="#" class="stat-gear text-muted" data-page="slides" title="Manage"><i class="bi bi-gear"></i></a>
+              </div>
+            </div>
+            <div class="stat-card-wrap">
+              <div class="stat-card d-flex align-items-center gap-2 gap-sm-3">
+                <div class="stat-icon stat-icon-info"><i class="bi bi-chat-quote"></i></div>
+                <div class="stat-body flex-grow-1 min-w-0">
+                  <div class="stat-value" id="statTestimonials">0</div>
+                  <div class="stat-label">Testimonials</div>
+                </div>
+                <a href="#" class="stat-gear text-muted" data-page="testimonials" title="Manage"><i class="bi bi-gear"></i></a>
+              </div>
+            </div>
+            <div class="stat-card-wrap">
+              <div class="stat-card d-flex align-items-center gap-2 gap-sm-3">
+                <div class="stat-icon stat-icon-success"><i class="bi bi-eye"></i></div>
+                <div class="stat-body flex-grow-1 min-w-0">
+                  <div class="stat-value" id="statVisits">0</div>
+                  <div class="stat-label">Total Visits</div>
+                </div>
+              </div>
+            </div>
+            <div class="stat-card-wrap">
+              <div class="stat-card d-flex align-items-center gap-2 gap-sm-3">
+                <div class="stat-icon stat-icon-warning"><i class="bi bi-globe"></i></div>
+                <div class="stat-body flex-grow-1 min-w-0">
+                  <div class="stat-value" id="statCountries">0</div>
+                  <div class="stat-label">Countries</div>
+                </div>
+              </div>
+            </div>
+            <div class="stat-card-wrap">
+              <div class="stat-card d-flex align-items-center gap-2 gap-sm-3">
+                <div class="stat-icon stat-icon-secondary"><i class="bi bi-hdd"></i></div>
+                <div class="stat-body flex-grow-1 min-w-0">
+                  <div class="stat-value" id="statFolderSize">0</div>
+                  <div class="stat-label">Folder Size (GB)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="table-card">
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead><tr><th>Country</th><th>Visitors</th></tr></thead>
+                <tbody id="statsCountriesTable"></tbody>
+              </table>
+            </div>
+            <nav id="statsCountriesPagination" class="p-3"></nav>
+          </div>
+        </div>
+
+        <div id="categoriesPage" class="page-content d-none">
+          <div class="d-flex justify-content-between gap-2 align-items-center mb-4">
+            <h4 class="page-title mb-0">Categories</h4>
+            <button type="button" class="btn btn-primary" id="categoryAddBtn"><i class="bi bi-plus-lg me-1"></i>Add</button>
+          </div>
+          <div class="table-card">
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead><tr><th style="width:40px" class="text-muted"><i class="bi bi-grip-vertical" title="Drag to reorder"></i></th><th style="width:50px"></th><th>ID</th><th>Image</th><th>Title (En)</th><th>Title (Ar)</th><th>Publish</th></tr></thead>
+                <tbody id="categoriesTable"></tbody>
+              </table>
+            </div>
+          </div>
+          <div class="modal fade" id="categoryModal" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="categoryModalTitle">Add Category</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                  <input type="hidden" id="categoryId" value="">
+                  <input type="hidden" id="categoryImage" value="">
+                  <div class="mb-3">
+                    <label class="form-label">Image <span class="text-danger">*</span></label>
+                    <div class="d-flex align-items-start gap-2">
+                      <div id="categoryImagePreview" class="border rounded overflow-hidden bg-light" style="width:80px;height:80px;flex-shrink:0;display:none">
+                        <img id="categoryImageImg" src="" alt="" style="width:100%;height:100%;object-fit:cover">
+                      </div>
+                      <div class="flex-grow-1">
+                        <input type="file" class="form-control form-control-sm" id="categoryImageInput" accept="image/jpeg,image/png,image/gif,image/webp">
+                        <button type="button" class="btn btn-sm btn-outline-danger mt-1" id="categoryImageRemove" style="display:none"><i class="bi bi-trash me-1"></i>Remove</button>
+                      </div>
+                    </div>
+                    <small class="text-muted">Required when adding or when removing existing image. JPEG, PNG, GIF or WebP. Max 50MB. Converted to WebP (max width 600px) on save.</small>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Title (En) <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="categoryTitleEn" placeholder="English title" required>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Title (Ar) <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="categoryTitleAr" placeholder="العنوان بالعربية" dir="rtl" required>
+                  </div>
+                  <div class="mb-0">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="categoryPublish" checked>
+                      <label class="form-check-label" for="categoryPublish">Published</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-primary" id="categorySaveBtn">Save</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="citiesPage" class="page-content d-none">
+          <div class="d-flex justify-content-between gap-2 align-items-center mb-4">
+            <h4 class="page-title mb-0">Cities</h4>
+            <button type="button" class="btn btn-primary" id="cityAddBtn"><i class="bi bi-plus-lg me-1"></i>Add</button>
+          </div>
+          <div class="table-card">
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead><tr><th style="width:40px" class="text-muted"><i class="bi bi-grip-vertical" title="Drag to reorder"></i></th><th style="width:50px"></th><th>ID</th><th>Title (En)</th><th>Title (Ar)</th><th>Parent</th><th>Publish</th></tr></thead>
+                <tbody id="citiesTable"></tbody>
+              </table>
+            </div>
+          </div>
+          <div class="modal fade" id="cityModal" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="cityModalTitle">Add City</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                  <input type="hidden" id="cityId" value="">
+                  <div class="mb-3">
+                    <label class="form-label">Title (En) <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="cityTitleEn" placeholder="English title" required>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Title (Ar) <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="cityTitleAr" placeholder="العنوان بالعربية" dir="rtl" required>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Parent City</label>
+                    <select class="form-select" id="cityParentId">
+                      <option value="">— None (top level) —</option>
+                    </select>
+                  </div>
+                  <div class="mb-0">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="cityPublish" checked>
+                      <label class="form-check-label" for="cityPublish">Published</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-primary" id="citySaveBtn">Save</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="postsPage" class="page-content d-none">
+          <div class="d-flex justify-content-between gap-2 align-items-center mb-4">
+            <h4 class="page-title mb-0">Projects</h4>
+            <button type="button" class="btn btn-primary" id="projectAddBtn"><i class="bi bi-plus-lg me-1"></i>Add</button>
+          </div>
+          <div class="posts-filters mb-3">
+            <div class="row g-2 align-items-center">
+              <div class="col-md-5">
+                <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-search"></i></span>
+                  <input type="text" class="form-control" id="postsSearch" placeholder="Search by title or description...">
+                </div>
+              </div>
+              <div class="col-md-3 offset-md-1">
+                <select class="form-select" id="postsCategoryFilter">
+                  <option value="">All categories</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <select class="form-select" id="postsCityFilter">
+                  <option value="">All cities</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="table-card">
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead><tr><th style="width:40px" class="text-muted"><i class="bi bi-grip-vertical" title="Drag to reorder"></i></th><th style="width:50px"></th><th>ID</th><th>Image</th><th>Title</th><th>Description</th><th>Gallery</th><th>Category</th><th>City</th><th>Publish</th></tr></thead>
+                <tbody id="postsTable"></tbody>
+              </table>
+            </div>
+            <nav id="postsPagination" class="p-3"></nav>
+          </div>
+          <div class="modal fade" id="projectModal" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="projectModalTitle">Add Project</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                  <ul class="nav nav-tabs mb-3" id="projectTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="projectDataTab" data-bs-toggle="tab" data-bs-target="#projectDataPane" type="button" role="tab">Project Data</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="projectGalleryTab" data-bs-toggle="tab" data-bs-target="#projectGalleryPane" type="button" role="tab">Gallery</button>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="projectTabContent">
+                    <div class="tab-pane fade show active" id="projectDataPane" role="tabpanel">
+                      <input type="hidden" id="projectId" value="">
+                      <div class="mb-3">
+                        <label class="form-label">Image <span class="text-danger">*</span></label>
+                        <div class="d-flex align-items-start gap-2">
+                          <div id="projectImagePreview" class="border rounded overflow-hidden bg-light" style="width:80px;height:80px;flex-shrink:0;display:none">
+                            <img id="projectImageImg" src="" alt="" style="width:100%;height:100%;object-fit:cover">
+                          </div>
+                          <div class="flex-grow-1">
+                            <input type="file" class="form-control form-control-sm" id="projectImageInput" accept="image/jpeg,image/png,image/gif,image/webp">
+                          </div>
+                        </div>
+                        <small class="text-muted">Required. JPEG, PNG, GIF or WebP. Max 5MB. Uploaded on save.</small>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">Title (En) <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="projectTitleEn" placeholder="English title" required>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">Title (Ar) <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="projectTitleAr" placeholder="العنوان بالعربية" dir="rtl" required>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">Description (En)</label>
+                        <textarea class="form-control" id="projectDescriptionEn" rows="4" placeholder="English description"></textarea>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">Description (Ar)</label>
+                        <textarea class="form-control" id="projectDescriptionAr" rows="4" placeholder="الوصف بالعربية" dir="rtl"></textarea>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6 mb-3">
+                          <label class="form-label">Category <span class="text-danger">*</span></label>
+                          <select class="form-select" id="projectCategoryId" required>
+                            <option value="">— Select —</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <label class="form-label">City <span class="text-danger">*</span></label>
+                          <select class="form-select" id="projectCityId" required>
+                            <option value="">— Select —</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="mb-0">
+                        <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="projectPublish" checked>
+                          <label class="form-check-label" for="projectPublish">Published</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="projectGalleryPane" role="tabpanel">
+                      <div class="mb-2 d-flex justify-content-between gap-2 align-items-center">
+                        <input type="file" class="form-control form-control-sm d-inline-block w-auto" id="projectGalleryInput" accept="image/jpeg,image/png,image/gif,image/webp" multiple>
+                        <div class="d-flex gap-2">
+                          <button type="button" class="btn btn-sm btn-outline-primary" id="projectGalleryAddVideo"><i class="bi bi-camera-video me-1"></i>Add Video</button>
+                          <button type="button" class="btn btn-sm btn-outline-danger" id="projectGalleryAddYoutube"><i class="bi bi-youtube me-1"></i>Add YouTube</button>
+                        </div>
+                      </div>
+                      <div id="projectGalleryGrid" class="row g-2 gallery-grid" style="min-height:80px"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-primary" id="projectSaveBtn">Save</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="slidesPage" class="page-content d-none">
+          <div class="d-flex justify-content-between gap-2 align-items-center mb-4">
+            <h4 class="page-title mb-0">Slides</h4>
+            <button type="button" class="btn btn-primary" id="slideAddBtn"><i class="bi bi-plus-lg me-1"></i>Add</button>
+          </div>
+          <div class="table-card">
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead><tr><th style="width:40px" class="text-muted"><i class="bi bi-grip-vertical" title="Drag to reorder"></i></th><th style="width:50px"></th><th>ID</th><th>Image</th><th>Title (En)</th><th>Title (Ar)</th><th>Order</th><th>Publish</th></tr></thead>
+                <tbody id="slidesTable"></tbody>
+              </table>
+            </div>
+          </div>
+          <div class="modal fade" id="slideModal" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="slideModalTitle">Add Slide</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                  <input type="hidden" id="slideId" value="">
+                  <div class="mb-3">
+                    <label class="form-label">Image <span class="text-danger">*</span></label>
+                    <div class="d-flex align-items-start gap-2">
+                      <div id="slideImagePreview" class="border rounded overflow-hidden bg-light" style="width:120px;height:68px;flex-shrink:0;display:none">
+                        <img id="slideImageImg" src="" alt="" style="width:100%;height:100%;object-fit:cover">
+                      </div>
+                      <div class="flex-grow-1">
+                        <input type="file" class="form-control form-control-sm" id="slideImageInput" accept="image/jpeg,image/png,image/gif,image/webp">
+                      </div>
+                    </div>
+                    <small class="text-muted">Required when adding. Max width 1920px. JPEG, PNG, GIF or WebP.</small>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Title (En)</label>
+                    <input type="text" class="form-control" id="slideTitleEn" placeholder="English title">
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Title (Ar)</label>
+                    <input type="text" class="form-control" id="slideTitleAr" placeholder="العنوان بالعربية" dir="rtl">
+                  </div>
+                  <div class="mb-0">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="slidePublish" checked>
+                      <label class="form-check-label" for="slidePublish">Published</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-primary" id="slideSaveBtn">Save</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="testimonialsPage" class="page-content d-none">
+          <div class="d-flex justify-content-between gap-2 align-items-center mb-4">
+            <h4 class="page-title mb-0">Testimonials</h4>
+            <button type="button" class="btn btn-primary" id="testimonialAddBtn"><i class="bi bi-plus-lg me-1"></i>Add</button>
+          </div>
+          <div class="table-card">
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead><tr><th style="width:40px" class="text-muted"><i class="bi bi-grip-vertical" title="Drag to reorder"></i></th><th style="width:50px"></th><th>ID</th><th>Image</th><th>Name (En)</th><th>Content</th><th>Order</th><th>Publish</th></tr></thead>
+                <tbody id="testimonialsTable"></tbody>
+              </table>
+            </div>
+          </div>
+          <div class="modal fade" id="testimonialModal" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="testimonialModalTitle">Add Testimonial</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                  <input type="hidden" id="testimonialId" value="">
+                  <div class="mb-3">
+                    <label class="form-label">Image <span class="text-danger">*</span></label>
+                    <div class="d-flex align-items-start gap-2">
+                      <div id="testimonialImagePreview" class="border rounded overflow-hidden bg-light" style="width:120px;height:68px;flex-shrink:0;display:none">
+                        <img id="testimonialImageImg" src="" alt="" style="width:100%;height:100%;object-fit:cover">
+                      </div>
+                      <div class="flex-grow-1">
+                        <input type="file" class="form-control form-control-sm" id="testimonialImageInput" accept="image/jpeg,image/png,image/gif,image/webp">
+                      </div>
+                    </div>
+                    <small class="text-muted">Required. Max width 300px. JPEG, PNG, GIF or WebP.</small>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Name (En) <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="testimonialNameEn" placeholder="English name" required>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Name (Ar) <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="testimonialNameAr" placeholder="الاسم بالعربية" dir="rtl" required>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Content (En) <span class="text-danger">*</span></label>
+                    <textarea class="form-control" id="testimonialContentEn" rows="4" placeholder="English content" required></textarea>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Content (Ar) <span class="text-danger">*</span></label>
+                    <textarea class="form-control" id="testimonialContentAr" rows="4" placeholder="المحتوى بالعربية" dir="rtl" required></textarea>
+                  </div>
+                  <div class="mb-0">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="testimonialPublish" checked>
+                      <label class="form-check-label" for="testimonialPublish">Published</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-primary" id="testimonialSaveBtn">Save</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="usersPage" class="page-content d-none">
+          <div class="d-flex justify-content-between gap-2 align-items-center mb-4">
+            <h4 class="page-title mb-0">Users</h4>
+            <button type="button" class="btn btn-primary" id="userAddBtn"><i class="bi bi-plus-lg me-1"></i>Add</button>
+          </div>
+          <div class="table-card">
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead><tr><th style="width:40px" class="text-muted"><i class="bi bi-grip-vertical" title="Drag to reorder"></i></th><th style="width:50px"></th><th>ID</th><th>Image</th><th>Name</th><th>Username</th><th>Email</th><th>Role</th></tr></thead>
+                <tbody id="usersTable"></tbody>
+              </table>
+            </div>
+          </div>
+          <div class="modal fade" id="userModal" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="userModalTitle">Add User</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                  <input type="hidden" id="userId" value="">
+                  <div class="mb-3">
+                    <label class="form-label">Image <span class="text-danger">*</span></label>
+                    <div class="d-flex align-items-start gap-2">
+                      <div id="userImagePreview" class="border rounded overflow-hidden bg-light" style="width:120px;height:68px;flex-shrink:0;display:none">
+                        <img id="userImageImg" src="" alt="" style="width:100%;height:100%;object-fit:cover">
+                      </div>
+                      <div class="flex-grow-1">
+                        <input type="file" class="form-control form-control-sm" id="userImageInput" accept="image/jpeg,image/png,image/gif,image/webp">
+                      </div>
+                    </div>
+                    <small class="text-muted">Required. Max width 300px. JPEG, PNG, GIF or WebP.</small>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Name <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="userName" placeholder="Full name" required>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Username <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="userUsername" placeholder="Username" required>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Email <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" id="userEmail" placeholder="email@example.com" required>
+                  </div>
+                  <div class="mb-0">
+                    <label class="form-label">Role <span class="text-danger">*</span></label>
+                    <select class="form-select" id="userRole" required>
+                      <option value="">— Select —</option>
+                      <option value="admin">admin</option>
+                      <option value="editor">editor</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-primary" id="userSaveBtn">Save</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="profilePage" class="page-content d-none">
+          <h4 class="page-title mb-4">Profile</h4>
+          <div class="card">
+            <div class="card-body">
+              <form id="profileForm">
+                <div class="row align-items-start g-4">
+                  <div class="col-lg-7">
+                    <div class="mb-3">
+                      <label class="form-label text-muted small text-uppercase fw-semibold">Name <span class="text-danger">*</span></label>
+                      <input type="text" class="form-control" id="profileNameInput" required>
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label text-muted small text-uppercase fw-semibold">Email</label>
+                      <input type="email" class="form-control" id="profileEmailInput">
+                      <small class="text-muted" id="profileEmailHint">Only admin can change email.</small>
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label text-muted small text-uppercase fw-semibold">Role</label>
+                      <select class="form-select" id="profileRoleSelect" style="display:none">
+                        <option value="admin">admin</option>
+                        <option value="editor">editor</option>
+                      </select>
+                      <input type="text" class="form-control" id="profileRoleInput" readonly>
+                      <small class="text-muted" id="profileRoleHint">Only admin can change role.</small>
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label text-muted small text-uppercase fw-semibold">Profile Image <span class="text-danger">*</span></label>
+                      <div class="d-flex align-items-start gap-2">
+                        <div id="profileImagePreview" class="border rounded overflow-hidden bg-light" style="width:120px;height:120px;flex-shrink:0">
+                          <img id="profileImageImg" src="" alt="" style="width:100%;height:100%;object-fit:cover" onerror="this.src='/images/theme/istaqm-128.png'">
+                        </div>
+                        <div class="flex-grow-1">
+                          <input type="file" class="form-control form-control-sm" id="profileImageInput" accept="image/jpeg,image/png,image/gif,image/webp">
+                          <small class="text-muted">Max width 300px.</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-5 text-center text-lg-end">
+                    <div class="profile-image-wrap d-inline-block">
+                      <img id="profileImage" src="" alt="Profile" class="rounded-circle object-fit-cover" style="width: 180px; height: 180px;" onerror="this.src='/images/theme/istaqm-128.png'">
+                    </div>
+                    <div class="mt-3">
+                      <button type="submit" class="btn btn-primary" id="profileSaveBtn">Save Profile</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <div id="loadingView" class="min-vh-100 w-100 position-fixed top-0 left-0 align-items-center justify-content-center">
+    <div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div>
+  </div>
+
+  <div class="toast-container position-fixed top-0 end-0 p-3" id="toastContainer" style="z-index: 9999;"></div>
+
+  <div id="galleryViewerModal" class="gallery-viewer-overlay" role="dialog" aria-modal="true" aria-label="Gallery viewer" tabindex="-1">
+    <span class="gallery-viewer-counter" id="galleryViewerCounter"></span>
+    <button type="button" class="gallery-viewer-close" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+    <button type="button" class="gallery-viewer-nav gallery-viewer-prev" aria-label="Previous"><i class="bi bi-chevron-left"></i></button>
+    <button type="button" class="gallery-viewer-nav gallery-viewer-next" aria-label="Next"><i class="bi bi-chevron-right"></i></button>
+    <div class="gallery-viewer-content">
+      <div class="gallery-viewer-media"></div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="galleryYoutubeModal" tabindex="-1" aria-labelledby="galleryYoutubeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="galleryYoutubeModalLabel">YouTube URL</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <label for="galleryYoutubeUrlInput" class="form-label">Enter YouTube video URL</label>
+          <input type="url" class="form-control" id="galleryYoutubeUrlInput" placeholder="https://www.youtube.com/watch?v=...">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary" id="galleryYoutubeSaveBtn">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="galleryVideoModal" tabindex="-1" aria-labelledby="galleryVideoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="galleryVideoModalLabel">Add Video</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="galleryVideoFileInput" class="form-label">Video file <span class="text-danger">*</span></label>
+            <input type="file" class="form-control" id="galleryVideoFileInput" accept="video/mp4,video/webm,video/ogg,video/quicktime,video/x-msvideo,video/x-matroska,video/x-ms-wmv">
+            <small class="text-muted">MP4, WebM, OGG, MOV, AVI, MKV, WMV</small>
+          </div>
+          <div class="mb-0">
+            <label for="galleryVideoThumbInput" class="form-label">Thumbnail image <span class="text-danger">*</span></label>
+            <input type="file" class="form-control" id="galleryVideoThumbInput" accept="image/jpeg,image/png,image/gif,image/webp">
+            <small class="text-muted">JPEG, PNG, GIF or WebP (converted to WebP)</small>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary" id="galleryVideoSaveBtn">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="confirmModalLabel">Confirm</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="confirmModalBody"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-danger" id="confirmModalBtn">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>

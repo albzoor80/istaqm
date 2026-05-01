@@ -1,0 +1,4 @@
+{
+    "ext": "js",
+    "ignore": ["node_modules","*.html","css/**","js/**","images/**","sitelib/**","views/**","sitemap.xml","robots.txt","database.json"]
+}

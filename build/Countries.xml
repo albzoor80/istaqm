@@ -1,0 +1,205 @@
+<countries>
+  <country code="af" phoneCode="93" arName="أفغانستان" enName="Afghanistan" visitorsCount="14"/>
+  <country code="al" phoneCode="355" arName="ألبانيا" enName="Albania" visitorsCount="70"/>
+  <country code="dz" phoneCode="213" arName="الجزائر" enName="Algeria" visitorsCount="10"/>
+  <country code="ad" phoneCode="376" arName="أندورا" enName="Andorra" visitorsCount="4"/>
+  <country code="ao" phoneCode="244" arName="أنجولا" enName="Angola" visitorsCount="5"/>
+  <country code="ar" phoneCode="54" arName="الأرجنتين" enName="Argentina" visitorsCount="49"/>
+  <country code="am" phoneCode="374" arName="أرمينيا" enName="Armenia" visitorsCount="4"/>
+  <country code="aw" phoneCode="297" arName="آروبا" enName="Aruba" visitorsCount="3"/>
+  <country code="au" phoneCode="61" arName="أستراليا" enName="Australia" visitorsCount="433"/>
+  <country code="at" phoneCode="43" arName="النمسا" enName="Austria" visitorsCount="648"/>
+  <country code="az" phoneCode="994" arName="أذربيجان" enName="Azerbaijan" visitorsCount="30"/>
+  <country code="bh" phoneCode="973" arName="البحرين" enName="Bahrain" visitorsCount="34"/>
+  <country code="bd" phoneCode="880" arName="بنجلاديش" enName="Bangladesh" visitorsCount="163"/>
+  <country code="by" phoneCode="375" arName="روسيا البيضاء" enName="Belarus" visitorsCount="396"/>
+  <country code="be" phoneCode="32" arName="بلجيكا" enName="Belgium" visitorsCount="741"/>
+  <country code="bz" phoneCode="501" arName="بليز" enName="Belize" visitorsCount="7"/>
+  <country code="bj" phoneCode="229" arName="بنين" enName="Benin" visitorsCount="0"/>
+  <country code="bt" phoneCode="975" arName="بوتان" enName="Bhutan" visitorsCount="4"/>
+  <country code="bo" phoneCode="591" arName="بوليفيا" enName="Bolivia" visitorsCount="3"/>
+  <country code="ba" phoneCode="387" arName="البوسنة والهرسك" enName="Bosnia And Herzegovina" visitorsCount="33"/>
+  <country code="bw" phoneCode="267" arName="بتسوانا" enName="Botswana" visitorsCount="0"/>
+  <country code="br" phoneCode="55" arName="البرازيل" enName="Brazil" visitorsCount="439"/>
+  <country code="bn" phoneCode="673" arName="بروناي" enName="Brunei Darussalam" visitorsCount="0"/>
+  <country code="bg" phoneCode="359" arName="بلغاريا" enName="Bulgaria" visitorsCount="503"/>
+  <country code="bf" phoneCode="226" arName="بوركينا فاسو" enName="Burkina Faso" visitorsCount="0"/>
+  <country code="mm" phoneCode="95" arName="ميانمار" enName="Myanmar" visitorsCount="2"/>
+  <country code="bi" phoneCode="257" arName="بوروندي" enName="Burundi" visitorsCount="4"/>
+  <country code="kh" phoneCode="855" arName="كمبوديا" enName="Cambodia" visitorsCount="136"/>
+  <country code="cm" phoneCode="237" arName="الكاميرون" enName="Cameroon" visitorsCount="2"/>
+  <country code="ca" phoneCode="1" arName="كندا" enName="Canada" visitorsCount="4094"/>
+  <country code="cv" phoneCode="238" arName="الرأس الأخضر" enName="Cape Verde" visitorsCount="8"/>
+  <country code="cf" phoneCode="236" arName="جمهورية افريقيا الوسطى" enName="Central African Republic" visitorsCount="0"/>
+  <country code="td" phoneCode="235" arName="تشاد" enName="Chad" visitorsCount="1"/>
+  <country code="cl" phoneCode="56" arName="شيلي" enName="Chile" visitorsCount="65"/>
+  <country code="cn" phoneCode="86" arName="الصين" enName="China" visitorsCount="9256"/>
+  <country code="cx" phoneCode="61" arName="جزيرة الكريسماس" enName="Christmas Island" visitorsCount="0"/>
+  <country code="cc" phoneCode="61" arName="جزر كوكوس" enName="Cocos (keeling) Islands" visitorsCount="0"/>
+  <country code="co" phoneCode="57" arName="كولومبيا" enName="Colombia" visitorsCount="31"/>
+  <country code="km" phoneCode="269" arName="جزر القمر" enName="Comoros" visitorsCount="0"/>
+  <country code="cg" phoneCode="242" arName="الكونغو - برازافيل" enName="Congo" visitorsCount="2"/>
+  <country code="cd" phoneCode="243" arName="جمهورية الكونغو الديمقراطية" enName="Congo" visitorsCount="2"/>
+  <country code="ck" phoneCode="682" arName="جزر كوك" enName="Cook Islands" visitorsCount="0"/>
+  <country code="cr" phoneCode="506" arName="كوستاريكا" enName="Costa Rica" visitorsCount="8"/>
+  <country code="hr" phoneCode="385" arName="كرواتيا" enName="Croatia" visitorsCount="18"/>
+  <country code="cu" phoneCode="53" arName="كوبا" enName="Cuba" visitorsCount="0"/>
+  <country code="cy" phoneCode="357" arName="قبرص" enName="Cyprus" visitorsCount="137"/>
+  <country code="cz" phoneCode="420" arName="جمهورية التشيك" enName="Czech Republic" visitorsCount="31"/>
+  <country code="dk" phoneCode="45" arName="الدانمرك" enName="Denmark" visitorsCount="533"/>
+  <country code="dj" phoneCode="253" arName="جيبوتي" enName="Djibouti" visitorsCount="0"/>
+  <country code="tl" phoneCode="670" arName="تيمور الشرقية" enName="Timor-leste" visitorsCount="0"/>
+  <country code="ec" phoneCode="593" arName="الاكوادور" enName="Ecuador" visitorsCount="8"/>
+  <country code="eg" phoneCode="20" arName="مصر" enName="Egypt" visitorsCount="48"/>
+  <country code="sv" phoneCode="503" arName="السلفادور" enName="El Salvador" visitorsCount="5"/>
+  <country code="gq" phoneCode="240" arName="غينيا الاستوائية" enName="Equatorial Guinea" visitorsCount="0"/>
+  <country code="er" phoneCode="291" arName="اريتريا" enName="Eritrea" visitorsCount="0"/>
+  <country code="ee" phoneCode="372" arName="استونيا" enName="Estonia" visitorsCount="156"/>
+  <country code="et" phoneCode="251" arName="اثيوبيا" enName="Ethiopia" visitorsCount="0"/>
+  <country code="fk" phoneCode="500" arName="جزر فوكلاند" enName="Falkland Islands (malvinas)" visitorsCount="0"/>
+  <country code="fo" phoneCode="298" arName="جزر فارو" enName="Faroe Islands" visitorsCount="3"/>
+  <country code="fj" phoneCode="679" arName="فيجي" enName="Fiji" visitorsCount="0"/>
+  <country code="fi" phoneCode="358" arName="فنلندا" enName="Finland" visitorsCount="332"/>
+  <country code="fr" phoneCode="33" arName="فرنسا" enName="France" visitorsCount="6606"/>
+  <country code="pf" phoneCode="689" arName="بولينيزيا الفرنسية" enName="French Polynesia" visitorsCount="0"/>
+  <country code="ga" phoneCode="241" arName="الجابون" enName="Gabon" visitorsCount="0"/>
+  <country code="gm" phoneCode="220" arName="غامبيا" enName="Gambia" visitorsCount="0"/>
+  <country code="ge" phoneCode="995" arName="جورجيا" enName="Georgia" visitorsCount="91"/>
+  <country code="de" phoneCode="49" arName="ألمانيا" enName="Germany" visitorsCount="5557"/>
+  <country code="gh" phoneCode="233" arName="غانا" enName="Ghana" visitorsCount="37"/>
+  <country code="gi" phoneCode="350" arName="جبل طارق" enName="Gibraltar" visitorsCount="0"/>
+  <country code="gr" phoneCode="30" arName="اليونان" enName="Greece" visitorsCount="110"/>
+  <country code="gl" phoneCode="299" arName="جرينلاند" enName="Greenland" visitorsCount="0"/>
+  <country code="gt" phoneCode="502" arName="جواتيمالا" enName="Guatemala" visitorsCount="0"/>
+  <country code="gn" phoneCode="224" arName="غينيا" enName="Guinea" visitorsCount="1"/>
+  <country code="gw" phoneCode="245" arName="غينيا بيساو" enName="Guinea-bissau" visitorsCount="0"/>
+  <country code="gy" phoneCode="592" arName="غيانا" enName="Guyana" visitorsCount="4"/>
+  <country code="ht" phoneCode="509" arName="هايتي" enName="Haiti" visitorsCount="0"/>
+  <country code="hn" phoneCode="504" arName="هندوراس" enName="Honduras" visitorsCount="209"/>
+  <country code="hk" phoneCode="852" arName="هونج كونج الصينية" enName="Hong Kong" visitorsCount="411"/>
+  <country code="hu" phoneCode="36" arName="المجر" enName="Hungary" visitorsCount="113"/>
+  <country code="in" phoneCode="91" arName="الهند" enName="India" visitorsCount="819"/>
+  <country code="id" phoneCode="62" arName="اندونيسيا" enName="Indonesia" visitorsCount="167"/>
+  <country code="ir" phoneCode="98" arName="ايران" enName="Iran" visitorsCount="310"/>
+  <country code="iq" phoneCode="964" arName="العراق" enName="Iraq" visitorsCount="57"/>
+  <country code="ie" phoneCode="353" arName="أيرلندا" enName="Ireland" visitorsCount="1725"/>
+  <country code="it" phoneCode="39" arName="ايطاليا" enName="Italy" visitorsCount="1118"/>
+  <country code="il" phoneCode="972" arName="اسرائيل" enName="Israel" visitorsCount="185"/>
+  <country code="ci" phoneCode="225" arName="ساحل العاج" enName="Ivory Coast" visitorsCount="0"/>
+  <country code="jp" phoneCode="81" arName="اليابان" enName="Japan" visitorsCount="4661"/>
+  <country code="jo" phoneCode="962" arName="الأردن" enName="Jordan" visitorsCount="13394"/>
+  <country code="kz" phoneCode="7" arName="كازاخستان" enName="Kazakhstan" visitorsCount="125"/>
+  <country code="ke" phoneCode="254" arName="كينيا" enName="Kenya" visitorsCount="50"/>
+  <country code="ki" phoneCode="686" arName="كيريباتي" enName="Kiribati" visitorsCount="0"/>
+  <country code="kw" phoneCode="965" arName="الكويت" enName="Kuwait" visitorsCount="37"/>
+  <country code="kg" phoneCode="996" arName="قرغيزستان" enName="Kyrgyzstan" visitorsCount="4"/>
+  <country code="la" phoneCode="856" arName="لاوس" enName="Laos" visitorsCount="14"/>
+  <country code="lv" phoneCode="371" arName="لاتفيا" enName="Latvia" visitorsCount="187"/>
+  <country code="lb" phoneCode="961" arName="لبنان" enName="Lebanon" visitorsCount="411"/>
+  <country code="ls" phoneCode="266" arName="ليسوتو" enName="Lesotho" visitorsCount="0"/>
+  <country code="lr" phoneCode="231" arName="ليبيريا" enName="Liberia" visitorsCount="0"/>
+  <country code="ly" phoneCode="218" arName="ليبيا" enName="Libya" visitorsCount="1"/>
+  <country code="li" phoneCode="423" arName="ليختنشتاين" enName="Liechtenstein" visitorsCount="0"/>
+  <country code="lt" phoneCode="370" arName="ليتوانيا" enName="Lithuania" visitorsCount="420"/>
+  <country code="lu" phoneCode="352" arName="لوكسمبورج" enName="Luxembourg" visitorsCount="198"/>
+  <country code="mo" phoneCode="853" arName="ماكاو الصينية" enName="Macao" visitorsCount="5"/>
+  <country code="mk" phoneCode="389" arName="مقدونيا" enName="Macedonia" visitorsCount="17"/>
+  <country code="mg" phoneCode="261" arName="مدغشقر" enName="Madagascar" visitorsCount="0"/>
+  <country code="mw" phoneCode="265" arName="ملاوي" enName="Malawi" visitorsCount="3"/>
+  <country code="my" phoneCode="60" arName="ماليزيا" enName="Malaysia" visitorsCount="92"/>
+  <country code="mv" phoneCode="960" arName="جزر الملديف" enName="Maldives" visitorsCount="0"/>
+  <country code="ml" phoneCode="223" arName="مالي" enName="Mali" visitorsCount="3"/>
+  <country code="mt" phoneCode="356" arName="مالطا" enName="Malta" visitorsCount="3"/>
+  <country code="mh" phoneCode="692" arName="جزر المارشال" enName="Marshall Islands" visitorsCount="0"/>
+  <country code="mr" phoneCode="222" arName="موريتانيا" enName="Mauritania" visitorsCount="0"/>
+  <country code="mu" phoneCode="230" arName="موريشيوس" enName="Mauritius" visitorsCount="14"/>
+  <country code="yt" phoneCode="262" arName="مايوت" enName="Mayotte" visitorsCount="0"/>
+  <country code="mx" phoneCode="52" arName="المكسيك" enName="Mexico" visitorsCount="45"/>
+  <country code="fm" phoneCode="691" arName="ميكرونيزيا" enName="Micronesia" visitorsCount="0"/>
+  <country code="md" phoneCode="373" arName="مولدافيا" enName="Moldova" visitorsCount="728"/>
+  <country code="mc" phoneCode="377" arName="موناكو" enName="Monaco" visitorsCount="40"/>
+  <country code="mn" phoneCode="976" arName="منغوليا" enName="Mongolia" visitorsCount="11"/>
+  <country code="me" phoneCode="382" arName="الجبل الأسود" enName="Montenegro" visitorsCount="3"/>
+  <country code="ma" phoneCode="212" arName="المغرب" enName="Morocco" visitorsCount="35"/>
+  <country code="mz" phoneCode="258" arName="موزمبيق" enName="Mozambique" visitorsCount="4"/>
+  <country code="na" phoneCode="264" arName="ناميبيا" enName="Namibia" visitorsCount="1"/>
+  <country code="nr" phoneCode="674" arName="نورو" enName="Nauru" visitorsCount="0"/>
+  <country code="np" phoneCode="977" arName="نيبال" enName="Nepal" visitorsCount="52"/>
+  <country code="nl" phoneCode="31" arName="هولندا" enName="Netherlands" visitorsCount="3787"/>
+  <country code="nc" phoneCode="687" arName="كاليدونيا الجديدة" enName="New Caledonia" visitorsCount="1"/>
+  <country code="nz" phoneCode="64" arName="نيوزيلاندا" enName="New Zealand" visitorsCount="36"/>
+  <country code="ni" phoneCode="505" arName="نيكاراجوا" enName="Nicaragua" visitorsCount="6"/>
+  <country code="ne" phoneCode="227" arName="النيجر" enName="Niger" visitorsCount="0"/>
+  <country code="ng" phoneCode="234" arName="نيجيريا" enName="Nigeria" visitorsCount="42"/>
+  <country code="nu" phoneCode="683" arName="نيوي" enName="Niue" visitorsCount="0"/>
+  <country code="kp" phoneCode="850" arName="كوريا الشمالية" enName="North Korea" visitorsCount="19"/>
+  <country code="no" phoneCode="47" arName="النرويج" enName="Norway" visitorsCount="344"/>
+  <country code="om" phoneCode="968" arName="عمان" enName="Oman" visitorsCount="27"/>
+  <country code="pk" phoneCode="92" arName="باكستان" enName="Pakistan" visitorsCount="63"/>
+  <country code="pw" phoneCode="680" arName="بالاو" enName="Palau" visitorsCount="0"/>
+  <country code="ps" phoneCode="970" arName="فلسطين" enName="Palestine, Palestinian Authority" visitorsCount="523"/>
+  <country code="pa" phoneCode="507" arName="بنما" enName="Panama" visitorsCount="12"/>
+  <country code="pg" phoneCode="675" arName="بابوا غينيا الجديدة" enName="Papua New Guinea" visitorsCount="0"/>
+  <country code="py" phoneCode="595" arName="باراجواي" enName="Paraguay" visitorsCount="2"/>
+  <country code="pe" phoneCode="51" arName="بيرو" enName="Peru" visitorsCount="17"/>
+  <country code="ph" phoneCode="63" arName="الفيلبين" enName="Philippines" visitorsCount="29"/>
+  <country code="pn" phoneCode="870" arName="بتكايرن" enName="Pitcairn" visitorsCount="0"/>
+  <country code="pl" phoneCode="48" arName="بولندا" enName="Poland" visitorsCount="848"/>
+  <country code="pt" phoneCode="351" arName="البرتغال" enName="Portugal" visitorsCount="1497"/>
+  <country code="pr" phoneCode="1" arName="بورتوريكو" enName="Puerto Rico" visitorsCount="0"/>
+  <country code="qa" phoneCode="974" arName="قطر" enName="Qatar" visitorsCount="30"/>
+  <country code="ro" phoneCode="40" arName="رومانيا" enName="Romania" visitorsCount="966"/>
+  <country code="ru" phoneCode="7" arName="روسيا" enName="Russia" visitorsCount="66462"/>
+  <country code="rw" phoneCode="250" arName="رواندا" enName="Rwanda" visitorsCount="0"/>
+  <country code="ws" phoneCode="685" arName="ساموا" enName="Samoa" visitorsCount="0"/>
+  <country code="sm" phoneCode="378" arName="سان مارينو" enName="San Marino" visitorsCount="0"/>
+  <country code="st" phoneCode="239" arName="ساو تومي وبرينسيبي" enName="Sao Tome And Principe" visitorsCount="0"/>
+  <country code="sa" phoneCode="966" arName="المملكة العربية السعودية" enName="Saudi Arabia" visitorsCount="1054"/>
+  <country code="sn" phoneCode="221" arName="السنغال" enName="Senegal" visitorsCount="1"/>
+  <country code="rs" phoneCode="381" arName="صربيا" enName="Serbia" visitorsCount="152"/>
+  <country code="sc" phoneCode="248" arName="سيشل" enName="Seychelles" visitorsCount="502"/>
+  <country code="sl" phoneCode="232" arName="سيراليون" enName="Sierra Leone" visitorsCount="1"/>
+  <country code="sg" phoneCode="65" arName="سنغافورة" enName="Singapore" visitorsCount="1588"/>
+  <country code="sk" phoneCode="421" arName="سلوفاكيا" enName="Slovakia" visitorsCount="143"/>
+  <country code="si" phoneCode="386" arName="سلوفينيا" enName="Slovenia" visitorsCount="50"/>
+  <country code="sb" phoneCode="677" arName="جزر سليمان" enName="Solomon Islands" visitorsCount="0"/>
+  <country code="so" phoneCode="252" arName="الصومال" enName="Somalia" visitorsCount="0"/>
+  <country code="za" phoneCode="27" arName="جمهورية جنوب افريقيا" enName="South Africa" visitorsCount="375"/>
+  <country code="kr" phoneCode="82" arName="كوريا الجنوبية" enName="South Korea" visitorsCount="352"/>
+  <country code="es" phoneCode="34" arName="أسبانيا" enName="Spain" visitorsCount="1825"/>
+  <country code="lk" phoneCode="94" arName="سريلانكا" enName="Sri Lanka" visitorsCount="2"/>
+  <country code="sh" phoneCode="290" arName="سانت هيلنا" enName="Saint Helena" visitorsCount="0"/>
+  <country code="pm" phoneCode="508" arName="سانت بيير وميكولون" enName="Saint Pierre And Miquelon" visitorsCount="0"/>
+  <country code="sd" phoneCode="249" arName="السودان" enName="Sudan" visitorsCount="0"/>
+  <country code="sr" phoneCode="597" arName="سورينام" enName="Suriname" visitorsCount="0"/>
+  <country code="sz" phoneCode="268" arName="سوازيلاند" enName="Swaziland" visitorsCount="0"/>
+  <country code="se" phoneCode="46" arName="السويد" enName="Sweden" visitorsCount="2600"/>
+  <country code="ch" phoneCode="41" arName="سويسرا" enName="Switzerland" visitorsCount="420"/>
+  <country code="sy" phoneCode="963" arName="سوريا" enName="Syria" visitorsCount="44"/>
+  <country code="tw" phoneCode="886" arName="تايوان" enName="Taiwan" visitorsCount="396"/>
+  <country code="tj" phoneCode="992" arName="طاجكستان" enName="Tajikistan" visitorsCount="2"/>
+  <country code="tz" phoneCode="255" arName="تانزانيا" enName="Tanzania" visitorsCount="16"/>
+  <country code="th" phoneCode="66" arName="تايلند" enName="Thailand" visitorsCount="96"/>
+  <country code="tg" phoneCode="228" arName="توجو" enName="Togo" visitorsCount="0"/>
+  <country code="tk" phoneCode="690" arName="توكيلو" enName="Tokelau" visitorsCount="0"/>
+  <country code="to" phoneCode="676" arName="تونجا" enName="Tonga" visitorsCount="0"/>
+  <country code="tn" phoneCode="216" arName="تونس" enName="Tunisia" visitorsCount="1"/>
+  <country code="tr" phoneCode="90" arName="تركيا" enName="Turkey" visitorsCount="472"/>
+  <country code="tm" phoneCode="993" arName="تركمانستان" enName="Turkmenistan" visitorsCount="1"/>
+  <country code="tv" phoneCode="688" arName="توفالو" enName="Tuvalu" visitorsCount="0"/>
+  <country code="ae" phoneCode="971" arName="الامارات العربية المتحدة" enName="United Arab Emirates" visitorsCount="221"/>
+  <country code="ug" phoneCode="256" arName="أوغندا" enName="Uganda" visitorsCount="4"/>
+  <country code="gb" phoneCode="44" arName="المملكة المتحدة" enName="United Kingdom" visitorsCount="5085"/>
+  <country code="ua" phoneCode="380" arName="أوكرانيا" enName="Ukraine" visitorsCount="3934"/>
+  <country code="uy" phoneCode="598" arName="أورجواي" enName="Uruguay" visitorsCount="0"/>
+  <country code="us" phoneCode="1" arName="الولايات المتحدة الأمريكية" enName="United States" visitorsCount="46159"/>
+  <country code="uz" phoneCode="998" arName="أوزبكستان" enName="Uzbekistan" visitorsCount="22"/>
+  <country code="vu" phoneCode="678" arName="فانواتو" enName="Vanuatu" visitorsCount="0"/>
+  <country code="va" phoneCode="39" arName="الفاتيكان" enName="Holy See (vatican City State)" visitorsCount="0"/>
+  <country code="ve" phoneCode="58" arName="فنزويلا" enName="Venezuela" visitorsCount="54"/>
+  <country code="vn" phoneCode="84" arName="فيتنام" enName="Vietnam" visitorsCount="1107"/>
+  <country code="wf" phoneCode="681" arName="جزر والس وفوتونا" enName="Wallis And Futuna" visitorsCount="0"/>
+  <country code="ye" phoneCode="967" arName="اليمن" enName="Yemen" visitorsCount="2"/>
+  <country code="zm" phoneCode="260" arName="زامبيا" enName="Zambia" visitorsCount="2"/>
+  <country code="zw" phoneCode="263" arName="زيمبابوي" enName="Zimbabwe" visitorsCount="0"/>
+</countries>

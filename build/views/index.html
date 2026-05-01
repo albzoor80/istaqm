@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="{{lang}}" dir="{{dir}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{metaDescription}}">
+  <title>{{pageTitle}}</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="/css/site.css" rel="stylesheet">
+  <link rel="icon" href="/images/theme/logo.ico" type="image/x-icon">
+</head>
+<body class="{{bodyClass}}">
+  {{navbar}}
+  <main id="pagecontent">
+    {{hero}}
+    {{storiesBar}}
+    {{projects}}
+    {{about}}
+    {{contact}}
+    {{stats}}
+    {{testimonials}}
+  </main>
+  {{footer}}
+  {{storyModal}}
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/gallery_story.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var dataEl = document.getElementById('storiesData');
+      if (dataEl && typeof fbHistory === 'function') {
+        document.querySelectorAll('.stories-container .story').forEach(function(el) {
+          var idx = parseInt(el.getAttribute('data-start-index'), 10);
+          el.addEventListener('click', function() { fbHistory(dataEl, idx); });
+          el.addEventListener('keydown', function(e) { if (e.key === 'Enter') fbHistory(dataEl, idx); });
+        });
+      }
+      if (typeof requestIdleCallback !== 'undefined') {
+        requestIdleCallback(function () {
+          (navigator.sendBeacon && navigator.sendBeacon('/api/record-visit')) || fetch('/api/record-visit', { method: 'POST', keepalive: true }).catch(function () {});
+        }, { timeout: 3000 });
+      } else {
+        setTimeout(function () {
+          (navigator.sendBeacon && navigator.sendBeacon('/api/record-visit')) || fetch('/api/record-visit', { method: 'POST', keepalive: true }).catch(function () {});
+        }, 1000);
+      }
+    });
+  </script>
+</body>
+</html>
